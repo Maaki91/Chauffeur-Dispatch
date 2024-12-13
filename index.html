@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChauffeurPro Dispatch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ChauffeurPro Dispatch</h1>
+        <nav>
+            <ul>
+                <li><a href="#dispatch">Dispatch Dashboard</a></li>
+                <li><a href="#booking">Booking Mask</a></li>
+                <li><a href="#drivers">Driver Management</a></li>
+                <li><a href="#vehicles">Vehicle Management</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="dispatch">
+            <h2>Dispatch Dashboard</h2>
+            <div class="calendar">
+                <label for="date-picker">Select Date:</label>
+                <input type="date" id="date-picker">
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Pick-Up</th>
+                        <th>Drop-Off</th>
+                        <th>Guest Name</th>
+                        <th>Vehicle</th>
+                        <th>Driver</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#001</td>
+                        <td>Vienna Airport</td>
+                        <td>Hotel Sacher</td>
+                        <td>John Doe</td>
+                        <td>Luxury Sedan</td>
+                        <td>Unassigned</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="booking">
+            <h2>Booking Mask</h2>
+            <form>
+                <label for="guest-name">Guest Name:</label>
+                <input type="text" id="guest-name" placeholder="Enter guest name" required>
+
+                <label for="guest-phone">Guest Phone Number:</label>
+                <input type="text" id="guest-phone" placeholder="Enter guest phone number" required>
+
+                <label for="guest-email">Guest Email (Optional):</label>
+                <input type="email" id="guest-email" placeholder="Enter guest email">
+
+                <label for="pickup">Pick-Up Location:</label>
+                <input type="text" id="pickup" placeholder="Enter pick-up location" required>
+
+                <label for="dropoff">Drop-Off Location:</label>
+                <input type="text" id="dropoff" placeholder="Enter drop-off location" required>
+
+                <label for="vehicle-category">Vehicle Category:</label>
+                <select id="vehicle-category" required>
+                    <option value="executive-sedan">Executive Sedan</option>
+                    <option value="executive-van">Executive Van</option>
+                    <option value="luxury-sedan">Luxury Sedan</option>
+                    <option value="luxury-van">Luxury Van</option>
+                </select>
+
+                <label for="service-type">Service Type:</label>
+                <select id="service-type" required>
+                    <option value="airport-transfer">Airport Transfer</option>
+                    <option value="city-transfer">City Transfer</option>
+                    <option value="hourly">Hourly as Directed</option>
+                    <option value="long-distance">Long Distance</option>
+                </select>
+
+                <label for="airport-details" class="conditional-field">If Airport Transfer, specify details:</label>
+                <select id="airport-details" class="conditional-field">
+                    <option value="vienna-main">Vienna Main Airport</option>
+                    <option value="vip-terminal">VIP Terminal Ehrenhof</option>
+                    <option value="general-aviation">General Aviation Center</option>
+                </select>
+
+                <label for="flight-number" class="conditional-field">Flight Number (if applicable):</label>
+                <input type="text" id="flight-number" placeholder="Enter flight number">
+
+                <label for="notes">Additional Notes:</label>
+                <textarea id="notes" placeholder="Enter any specific details here"></textarea>
+
+                <label for="reference-number">Reference Number (Optional for Events):</label>
+                <input type="text" id="reference-number" placeholder="Enter reference number">
+
+                <button type="submit">Submit Booking</button>
+            </form>
+        </section>
+
+        <section id="drivers">
+            <h2>Driver Management</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Driver ID</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Status</th>
+                        <th>Total Rides</th>
+                        <th>Last Active</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#D001</td>
+                        <td>Driver A</td>
+                        <td>+123456789</td>
+                        <td>Available</td>
+                        <td>120</td>
+                        <td>Yesterday</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="vehicles">
+            <h2>Vehicle Management</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Vehicle ID</th>
+                        <th>Model</th>
+                        <th>Category</th>
+                        <th>Status</th>
+                        <th>Next Service Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#V001</td>
+                        <td>Mercedes-Benz S-Class</td>
+                        <td>Luxury Sedan</td>
+                        <td>Available</td>
+                        <td>2024-01-15</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
